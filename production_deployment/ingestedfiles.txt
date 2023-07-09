@@ -1,0 +1,4 @@
+location: /Users/iman/Desktop/workspace/Github/udacity/udacity-dynamic-risk-assessment/ingesteddata/
+file name: compiled_data.csv
+data length: 26
+time at ingestion: 2023-07-09 18:29:25.580904
