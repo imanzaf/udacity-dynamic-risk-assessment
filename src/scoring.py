@@ -21,6 +21,7 @@ def score_model(model, data, features, target, output_path):
 
     # Calculate F1 score
     score = f1_score(y, preds)
+    print(score)
 
     # write to file
     with open(os.getcwd()+'/'+output_path+'/latestscore.txt', 'w') as f:
