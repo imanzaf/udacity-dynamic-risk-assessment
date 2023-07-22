@@ -2,6 +2,8 @@
 This repository holds the fourth project completed towards Udacity's Machine Learning DevOps Engineer Nanodegree
 
 
+note: project is complete but function and script documenation is still in progress.
+
 
 ### Project Overview
 1. **Data ingestion**: Automatically check a database for new data that can be used for model training. Compile all training data to a training dataset and save it to persistent storage. Write metrics related to the completed data ingestion tasks to persistent storage.
