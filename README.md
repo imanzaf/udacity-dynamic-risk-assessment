@@ -2,7 +2,10 @@
 This repository holds the fourth project completed towards Udacity's Machine Learning DevOps Engineer Nanodegree
 
 
-note: project is complete but function and script documenation is still in progress.
+#### Improvements to make:
+- Add documentation to functions and scripts in src
+- format scripts using pep8 guidelines
+- clean up unused libraries
 
 
 ### Project Overview
