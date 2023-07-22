@@ -1,13 +1,13 @@
 # Dynamic Risk Assessment System
 This repository holds the fourth project completed towards Udacity's Machine Learning DevOps Engineer Nanodegree
 
-
+<br/>
 #### Improvements to make:
 - Add documentation to functions and scripts in src
 - format scripts using pep8 guidelines
 - clean up unused libraries
 
-
+<br/>
 ### Project Overview
 1. **Data ingestion**: Automatically check a database for new data that can be used for model training. Compile all training data to a training dataset and save it to persistent storage. Write metrics related to the completed data ingestion tasks to persistent storage.
 2. **Training, scoring, and deploying**: Write scripts that train an ML model that predicts attrition risk, and score the model. Write the model and the scoring metrics to persistent storage.
@@ -16,7 +16,7 @@ This repository holds the fourth project completed towards Udacity's Machine Lea
 5. **Process Automation**: Create a script and cron job that automatically run all previous steps at regular intervals.
 
 
-
+<br/>
 ### Running the files
 The project can be run by running the fullprocess.py file using the below commands in the project's root directory
 
