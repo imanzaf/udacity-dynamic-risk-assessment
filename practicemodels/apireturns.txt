@@ -9,55 +9,23 @@ Predictions: [
 Model Score: 0.5714285714285715
 Summary Statistics:
  {
-  "Unnamed: 0": {
-    "25%": 6.25,
-    "50%": 12.5,
-    "75%": 18.75,
-    "count": 26.0,
-    "max": 25.0,
-    "mean": 12.5,
-    "min": 0.0,
-    "std": 7.648529270389178
+  "mean": {
+    "exited": 0.5769230769230769,
+    "lastmonth_activity": 165.65384615384616,
+    "lastyear_activity": 1502.923076923077,
+    "number_of_employees": 26.884615384615383
   },
-  "exited": {
-    "25%": 0.0,
-    "50%": 1.0,
-    "75%": 1.0,
-    "count": 26.0,
-    "max": 1.0,
-    "mean": 0.5769230769230769,
-    "min": 0.0,
-    "std": 0.5038314736557788
+  "median": {
+    "exited": 1.0,
+    "lastmonth_activity": 73.0,
+    "lastyear_activity": 955.0,
+    "number_of_employees": 14.0
   },
-  "lastmonth_activity": {
-    "25%": 16.75,
-    "50%": 73.0,
-    "75%": 100.75,
-    "count": 26.0,
-    "max": 1090.0,
-    "mean": 165.65384615384616,
-    "min": 0.0,
-    "std": 284.0332293669447
-  },
-  "lastyear_activity": {
-    "25%": 406.25,
-    "50%": 955.0,
-    "75%": 1615.5,
-    "count": 26.0,
-    "max": 10983.0,
-    "mean": 1502.923076923077,
-    "min": 18.0,
-    "std": 2192.6449584568304
-  },
-  "number_of_employees": {
-    "25%": 7.25,
-    "50%": 14.0,
-    "75%": 34.5,
-    "count": 26.0,
-    "max": 103.0,
-    "mean": 26.884615384615383,
-    "min": 1.0,
-    "std": 31.353885785435814
+  "std": {
+    "exited": 0.5038314736557788,
+    "lastmonth_activity": 284.0332293669447,
+    "lastyear_activity": 2192.6449584568304,
+    "number_of_employees": 31.353885785435814
   }
 }
 
@@ -67,12 +35,11 @@ Model Diagnostics:
     0.0,
     0.0,
     0.0,
-    0.0,
     0.0
   ],
   "execution time": [
-    0.03659062500000232,
-    0.031064500000013595
+    0.03972779099999979,
+    0.030708667000000744
   ],
   "outdated packages": [
     "Package                       Version     Latest    Type",

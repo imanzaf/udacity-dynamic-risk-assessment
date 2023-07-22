@@ -24,8 +24,13 @@ def dataframe_summary(data):
 
     # Get numeric columns
     df = data.select_dtypes(include=np.number)
+    if 'Unnamed: 0' in df.columns:
+        df = df.drop('Unnamed: 0', axis=1)
     # Get summary stats
-    summary = df.describe()
+    means = df.mean()
+    medians = df.median()
+    stds = df.std()
+    summary = pd.concat([means, medians, stds], axis=1).rename({0: 'mean', 1: 'median', 2: 'std'}, axis=1)
 
     return summary
 
@@ -35,6 +40,8 @@ def missing_data(data):
 
     # Get numeric columns
     df = data.select_dtypes(include=np.number)
+    if 'Unnamed: 0' in df.columns:
+        df = df.drop('Unnamed: 0', axis=1)
     # Get list of NA percentages
     NAs = ((df.isna().sum()/len(df.index))*100).to_list()
 
