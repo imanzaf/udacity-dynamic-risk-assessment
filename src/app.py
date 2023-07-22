@@ -20,11 +20,8 @@ app.secret_key = '1652d576-484a-49fd-913a-6879acfa6ba4'
 with open('config.json','r') as f:
     config = json.load(f) 
 
-model_path = os.path.join(config['output_model_path'])
+model_path = os.path.join(config['prod_deployment_path'])
 data_output_path = os.path.join(config['output_folder_path'])
-test_data_path = os.path.join(config['test_data_path'])
-
-prediction_model = None
 
 
 @app.route("/")
@@ -41,7 +38,7 @@ def predict():
     df = pd.read_csv(file_location)
 
     # Import model
-    model = pickle.load(open(os.getcwd() + '/' + model_path + '/trainedmodel.pkl', 'rb'))
+    model = pickle.load(open(os.path.join(os.getcwd(), model_path, 'trainedmodel.pkl'), 'rb'))
 
     # call prediction function
     preds = model_predictions(model, df,
@@ -63,7 +60,7 @@ def score():
 @app.route("/summarystats", methods=['GET','OPTIONS'])
 def stats():        
     # get summary stats
-    df = pd.read_csv(os.getcwd() + '/' + test_data_path + '/testdata.csv')
+    df = pd.read_csv(os.path.join(os.getcwd(), data_output_path, 'finaldata.csv'))
     summary = dataframe_summary(df)
     return summary.to_dict()
 
@@ -73,7 +70,7 @@ def stats():
 def diagnostics():
     #check timing and percent NA values
     diagnostics_dict = {}
-    df = pd.read_csv(os.getcwd() + '/' + test_data_path + '/testdata.csv')
+    df = pd.read_csv(os.path.join(os.getcwd(), data_output_path, 'finaldata.csv'))
     nulls = missing_data(df)
     diagnostics_dict['% of nulls'] = nulls
     time = execution_time()

@@ -11,7 +11,7 @@ import json
 
 
 # Function for model scoring
-def score_model(model, data, features, target, output_path):
+def score_model(model, data, features, target, output_path=None):
     # Subset X and y
     X = data[features]
     y = data[target]
@@ -24,8 +24,11 @@ def score_model(model, data, features, target, output_path):
     print(score)
 
     # write to file
-    with open(os.getcwd()+'/'+output_path+'/latestscore.txt', 'w') as f:
-        f.write(str(score))
+    if output_path!= None:
+        with open(os.path.join(os.getcwd(), output_path, 'latestscore.txt'), 'w') as f:
+            f.write(str(score))
+    else:
+        return score
 
 
 if __name__ == '__main__':
@@ -37,8 +40,8 @@ if __name__ == '__main__':
     test_data_path = os.path.join(config['test_data_path'])
 
     # load model and data
-    model = pickle.load(open(os.getcwd()+'/'+model_path+'/trainedmodel.pkl', 'rb'))
-    df = pd.read_csv(os.getcwd()+'/'+test_data_path+'/testdata.csv')
+    model = pickle.load(open(os.path.join(os.getcwd(), model_path, 'trainedmodel.pkl'), 'rb'))
+    df = pd.read_csv(os.path.join(os.getcwd(), test_data_path, 'testdata.csv'))
 
     # score model
     features = ['lastmonth_activity', 'lastyear_activity', 'number_of_employees']

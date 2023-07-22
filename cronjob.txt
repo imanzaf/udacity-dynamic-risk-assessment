@@ -1,0 +1,1 @@
+*/10  * * * * /Users/iman/desktop/workspace/github/udacity/udacity-dynamic-risk-assessment/src/fullprocess.py

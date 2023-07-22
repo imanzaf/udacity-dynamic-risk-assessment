@@ -27,7 +27,7 @@ def train_model(data, features, target):
     model.fit(X, y)
 
     # Write the trained model to file
-    pickle.dump(model, open(os.getcwd()+'/'+model_path+'/trainedmodel.pkl', 'wb'))
+    pickle.dump(model, open(os.path.join(os.getcwd(), model_path, 'trainedmodel.pkl'), 'wb'))
 
 
 if __name__ == '__main__':
@@ -40,7 +40,7 @@ if __name__ == '__main__':
     model_path = os.path.join(config['output_model_path'])
 
     # Import data
-    df = pd.read_csv(os.getcwd()+'/'+dataset_csv_path+'/compiled_data.csv')
+    df = pd.read_csv(os.path.join(os.getcwd(), dataset_csv_path, 'finaldata.csv'))
 
     # Train model
     features = ['lastmonth_activity', 'lastyear_activity', 'number_of_employees']
